@@ -948,11 +948,7 @@ int main() {
     input_grid = fill_holes_openvdb(input_grid);
 
     std::cout << "done fill holes" << std::endl;
-    // binarize 
-    //prepare_data_full(input_grid);
-   // prepare_data(input_grid);
-    // Prune inactive voxels: keep only non-zero (foreground) values active
-   // openvdb::tools::changeBackground(grid->tree(), 0);
+   
    // grid->tree().prune();           // remove zero-valued active voxels
 
     // Lee thinning 
@@ -986,4 +982,5 @@ int main() {
     }
 
     return 0;
+
 }
