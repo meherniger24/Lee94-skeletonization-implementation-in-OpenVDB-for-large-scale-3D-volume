@@ -924,7 +924,7 @@ int main() {
     openvdb::initialize();
 
     // input VDB 
-    std::string input_filename = "C:/openvdb_drop/bin/phi_400.vdb";
+    std::string input_filename = "phi_400.vdb";
     openvdb::io::File file_sdf(input_filename);
     file_sdf.open();
    
@@ -958,15 +958,9 @@ int main() {
 
     computeThinImage(input_grid);
     
-    /*tira::volume<float> T2(400, 400, 400);
-   vdb2img3D(*grid, T2);
-   T2.save_npy("C:/Users/meher/spyder/HD13.npy");*/
-   //exit(1);
-   
-    //cleanup_thin_result(input_grid);
-
+    
     // Save the output VDB 
-    std::string output_filename = "C:/openvdb_drop/bin/lee_thin_400.vdb";
+    std::string output_filename = "lee_thin_400.vdb";
     openvdb::io::File output_file(output_filename);
     openvdb::GridPtrVec grids;
     grids.push_back(input_grid);
@@ -984,3 +978,4 @@ int main() {
     return 0;
 
 }
+
